@@ -43,7 +43,7 @@ dependencies {
         }
     }
 ```
-![](https://github.com/ymex/cute.L/blob/master/app.png)
+##capture picture
 
 - Base type
 ![](https://github.com/ymex/cute.L/blob/master/base.png)
