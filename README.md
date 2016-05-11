@@ -10,6 +10,8 @@ dependencies {
 ```
 
 ##Sample Usage
+
+![](https://github.com/ymex/cute.L/blob/master/app.png)
 ```java
  @Override
     public void onClick(View v) {
