@@ -20,16 +20,26 @@ android {
 }
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
     testCompile 'junit:junit:4.12'
-    compile 'com.android.support:appcompat-v7:23.3.0'
 }
 
 publish {
-    userOrg = 'cn.ymex'
+    userOrg = 'ymex'
     groupId = 'cn.ymex'
     artifactId = 'cute.L'
     publishVersion = '0.5.2'
     desc = 'Log printer for Android'
     website = 'https://github.com/ymex/cute.L'
+}
+tasks.withType(JavaCompile) {
+    options.encoding = "UTF-8"
+}
+task androidJavadocs(type: Javadoc) {
+    source = android.sourceSets.main.java.srcDirs
+    classpath += project.files(android.getBootClasspath().join(File.pathSeparator))
+    allprojects {
+        tasks.withType(Javadoc) {
+            options.encoding = "UTF-8"
+        }
+    }
 }

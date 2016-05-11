@@ -1,5 +1,5 @@
 # cute.L
-Log printer
+Log printer for Android
 
 ##Use in Android Studio
 
@@ -11,7 +11,7 @@ dependencies {
 
 ##Sample Usage
 
-![](https://github.com/ymex/cute.L/blob/master/app.png)
+
 ```java
  @Override
     public void onClick(View v) {
@@ -43,7 +43,7 @@ dependencies {
         }
     }
 ```
-
+![](https://github.com/ymex/cute.L/blob/master/app.png)
 
 - Base type
 ![](https://github.com/ymex/cute.L/blob/master/base.png)
