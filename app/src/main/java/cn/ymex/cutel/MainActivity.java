@@ -1,15 +1,19 @@
 package cn.ymex.cutel;
 
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 
-public class MainActivity extends AppCompatActivity {
+import com.google.gson.Gson;
+
+import cn.ymex.cute.log.L;
+import cn.ymex.cutel.model.Data;
+
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,15 +21,44 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        findViewById(R.id.btn_base).setOnClickListener(this);
+        findViewById(R.id.btn_ob).setOnClickListener(this);
+        findViewById(R.id.btn_null).setOnClickListener(this);
+        findViewById(R.id.btn_list).setOnClickListener(this);
+        findViewById(R.id.btn_map).setOnClickListener(this);
+        findViewById(R.id.btn_array).setOnClickListener(this);
+        findViewById(R.id.btn_json).setOnClickListener(this);
+    }
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()) {
+            case R.id.btn_base://base type
+                L.i(1);
+                L.d(2.0);
+                L.e(false);
+                L.w("this is String type!");
+                break;
+            case R.id.btn_ob://object type
+                L.d(Data.object());
+                break;
+            case R.id.btn_null:// object is null
+                L.d(null);
+                break;
+            case R.id.btn_list: // list type
+                L.d(Data.list());
+                break;
+            case R.id.btn_map://map type
+                L.w(Data.map());
+                break;
+            case R.id.btn_array://array type
+                L.e(Data.array());
+                break;
+            case R.id.btn_json://json data
+                L.i(new Gson().toJson(Data.array()));
+                break;
+        }
     }
 
     @Override
@@ -37,9 +70,7 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
+
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
