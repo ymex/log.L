@@ -44,12 +44,12 @@ dependencies {
 
 
 - Base type
-![](https://github.com/ymex/cute.L/base.png)
+![](https://github.com/ymex/cute.L/blob/master/base.png)
 - Object type
-![](https://github.com/ymex/cute.L/object.png)
+![](https://github.com/ymex/cute.L/blob/master/object.png)
 - List type
-![](https://github.com/ymex/cute.L/list.png)
+![](https://github.com/ymex/cute.L/blob/master/list.png)
 - Map type
-![](https://github.com/ymex/cute.L/map.png)
+![](https://github.com/ymex/cute.L/blob/master/map.png)
 - Array type
-![](https://github.com/ymex/cute.L/array.png)
+![](https://github.com/ymex/cute.L/blob/master/array.png)
