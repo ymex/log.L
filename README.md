@@ -23,9 +23,9 @@ Log printer for Android
 ##Question
 ###日志没有颜色
 你需要在android studio 设置颜色：
-File > Settings > Editor > Colors &Fonts -> Android Logcat
-去掉Use Inberited attributes的勾选框，  再将 Foreground 前的复选框选上，勾选Foreground选择框，
-点击Foreground后面颜色选择框。就可以选颜色了。 选好颜色点击Apply–>OK就能保存到android studio 中。
+`File > Settings > Editor > Colors &Fonts -> Android Logcat`
+去掉`Use Inberited attributes`的勾选框，  再将 `Foreground` 前的复选框选上，勾选`Foreground选择框`，
+点击`Foreground`后面颜色选择框。就可以选颜色了。 选好颜色点击`Apply–>OK`就能保存到android studio 中。
 
 样例配色:
 <table>
