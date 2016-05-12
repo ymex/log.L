@@ -1,6 +1,7 @@
 # cute.L
 Log printer for Android
 
+
 ##Use in Android Studio
 
 ```
@@ -11,36 +12,14 @@ Log printer for Android
 
 
 ```java
- @Override
-    public void onClick(View v) {
-        switch (v.getId()) {
-            case R.id.btn_base://base type
-                L.i(1);
-                L.d(2.0);
-                L.e(false);
-                L.w("this is String type!");
-                break;
-            case R.id.btn_ob://object type
-                L.d(Data.object());
-                break;
-            case R.id.btn_null:// object is null
-                L.d(null);
-                break;
-            case R.id.btn_list: // list type
-                L.d(Data.list());
-                break;
-            case R.id.btn_map://map type
-                L.w(Data.map());
-                break;
-            case R.id.btn_array://array type
-                L.e(Data.array());
-                break;
-            case R.id.btn_json://json data
-                L.i(new Gson().toJson(Data.array()));
-                break;
-        }
-    }
+    L.w("this is String type!");
+    L.d(Data.object());
+    L.e(Data.array());
+    ...
 ```
+参考样例。
+
+
 ##问题
 ###日志没有颜色
 你需要在android studio 设置颜色：
@@ -80,7 +59,7 @@ File->Settings 或Ctrl + Alt +S 找到 Editor -> Colors &Fonts -> Android Logcat
 </table>
 
 
-###日志打印格式错乱？
+###日志打印格式错乱 ？
 设置你Android studio 的字体大小。
 
 ###全局关闭日志打印？
@@ -89,7 +68,7 @@ File->Settings 或Ctrl + Alt +S 找到 Editor -> Colors &Fonts -> Android Logcat
 L.setLOG(false);
 ```
 
-###自定义打印格式？
+###自定义打印格式 ？
 你只需要要继承 `Printer` 类 实现以下方法：
 ```
     public abstract String logHeader();//日志头部
@@ -97,6 +76,12 @@ L.setLOG(false);
     public abstract String logContent(Object message);//日志内容
 ```
 设置`L.setPrinter(new CustomerPrinter());`即可。
+
+###如何设置tag ?
+
+```
+L.d(tag,message);
+```
 
 ##capture picture
 
