@@ -17,14 +17,15 @@ Log printer for Android
     L.e(Data.array());
     ...
 ```
-参考样例。
+具体[参考样例](https://github.com/ymex/cute.L/blob/master/app%2Fsrc%2Fmain%2Fjava%2Fcn%2Fymex%2Fcutel%2FMainActivity.java)
 
 
-##问题
+##Question
 ###日志没有颜色
 你需要在android studio 设置颜色：
-File->Settings 或Ctrl + Alt +S 找到 Editor -> Colors &Fonts -> Android Logcat
-去掉Use Inberited attributes的勾选框，  再将 Foreground 前的复选框选上，勾选Foreground选择框，点击Foreground后面颜色选择框。就可以选颜色了。 选好颜色点击Apply–>OK就能保存到android studio 中。
+File > Settings > Editor > Colors &Fonts -> Android Logcat
+去掉Use Inberited attributes的勾选框，  再将 Foreground 前的复选框选上，勾选Foreground选择框，
+点击Foreground后面颜色选择框。就可以选颜色了。 选好颜色点击Apply–>OK就能保存到android studio 中。
 
 样例配色:
 <table>
@@ -34,33 +35,34 @@ File->Settings 或Ctrl + Alt +S 找到 Editor -> Colors &Fonts -> Android Logcat
     </tr>
     <tr>
         <td>Verbose</td>
-        <td bgcolor=">#F9BDBB">#F9BDBB</td>
+        <td>#F9BDBB</td>
     </tr>
     <tr>
         <td>Info</td>
-        <td bgcolor="#B39DDB">#B39DDB</td>
+        <td>#B39DDB</td>
     </tr>
     <tr>
         <td>Debug</td>
-        <td bgcolor="#738FFE">#738FFE</td>
+        <td>#738FFE</td>
     </tr>
     <tr>
         <td>warning</td>
-        <td bgcolor="#EF6C00">#EF6C00</td>
+        <td>#EF6C00</td>
     </tr>
     <tr>
         <td>Error</td>
-        <td bgcolor="#E00032">#E00032</td>
+        <td>#E00032</td>
     </tr>
     <tr>
         <td>Assert</td>
-        <td bgcolor="#FF1696">#FF1696</td>
+        <td>#FF1696</td>
     </tr>
 </table>
 
 
 ###日志打印格式错乱 ？
-设置你Android studio 的字体大小。
+设置Android studio  Console 字体大小。
+`Editor>Colors&Fonts>Console Font `
 
 ###全局关闭日志打印？
 
