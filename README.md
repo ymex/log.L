@@ -21,7 +21,18 @@ Log printer for Android
 
 
 ##Question
-###日志没有颜色
+###日志默认TAG是什么？
+```
+ public static String TAG = "cute.L";//默认日志tag
+```
+
+###如何设置tag ?
+
+```
+L.d(tag,message);
+```
+
+###日志没有颜色 ?
 你需要在android studio 设置颜色：
 `File > Settings > Editor > Colors &Fonts -> Android Logcat`
 去掉`Use Inberited attributes`的勾选框，  再将 `Foreground` 前的复选框选上，勾选`Foreground选择框`，
@@ -79,11 +90,7 @@ L.setLOG(false);
 ```
 设置`L.setPrinter(new CustomerPrinter());`即可。
 
-###如何设置tag ?
 
-```
-L.d(tag,message);
-```
 
 ##capture picture
 
