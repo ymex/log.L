@@ -4,9 +4,7 @@ Log printer for Android
 ##Use in Android Studio
 
 ```
-dependencies {
     compile 'cn.ymex:cute.L:0.5.2'
-}
 ```
 
 ##Sample Usage
@@ -50,7 +48,7 @@ File->Settings 或Ctrl + Alt +S 找到 Editor -> Colors &Fonts -> Android Logcat
 去掉Use Inberited attributes的勾选框，  再将 Foreground 前的复选框选上，勾选Foreground选择框，点击Foreground后面颜色选择框。就可以选颜色了。 选好颜色点击Apply–>OK就能保存到android studio 中。
 
 样例配色:
-<table border="1" width="auto">
+<table>
     <tr>
         <th>标签</th>
         <th>色值</th>
