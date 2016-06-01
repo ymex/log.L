@@ -10,11 +10,10 @@ import java.lang.reflect.Method;
  * Etiam sed turpis ac ipsum condimentum fringilla. Maecenas magna.
  * Proin dapibus sapien vel ante. Aliquam erat volutpat. Pellentesque sagittis ligula eget metus.
  * Vestibulum commodo. Ut rhoncus gravida arcu.
- * <p>
+ *
  * Email:ymex@foxmail.com  (www.ymex.cn)
  *
- * @author ymex
- * @date 15/03/29
+ * @author ymex  15/03/29
  */
 public abstract class Printer {
     public static final int ENV_STACK = 7;

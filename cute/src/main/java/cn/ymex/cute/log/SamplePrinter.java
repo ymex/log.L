@@ -6,11 +6,10 @@ package cn.ymex.cute.log;
  * Etiam sed turpis ac ipsum condimentum fringilla. Maecenas magna.
  * Proin dapibus sapien vel ante. Aliquam erat volutpat. Pellentesque sagittis ligula eget metus.
  * Vestibulum commodo. Ut rhoncus gravida arcu.
- * <p/>
+ *
  * Email:ymex@foxmail.com  (www.ymex.cn)
  *
- * @author ymex
- * @date 16/05/01
+ * @author ymex 16/05/01
  */
 public final class SamplePrinter extends Printer {
     public static String SINGLE_ARROW_RIGHT = ">>>";
