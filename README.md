@@ -5,7 +5,7 @@ Log printer for Android
 ##Use in Android Studio
 
 ```
-    compile 'cn.ymex:cute.L:0.5.2'
+    compile 'cn.ymex:cute.L:0.6.0'
 ```
 
 ##Sample Usage
