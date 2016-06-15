@@ -1,10 +1,4 @@
-package cn.ymex.cute.log;
-
-import android.util.Log;
-
-import java.lang.reflect.Method;
-
-/**
+/*
  * Copyright (c) 2015. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
  * Morbi non lorem porttitor neque feugiat blandit. Ut vitae ipsum eget quam lacinia accumsan.
  * Etiam sed turpis ac ipsum condimentum fringilla. Maecenas magna.
@@ -15,6 +9,13 @@ import java.lang.reflect.Method;
  *
  * @author ymex  15/03/29
  */
+package cn.ymex.cute.log;
+
+import android.util.Log;
+
+import java.lang.reflect.Method;
+
+
 public abstract class Printer {
     public static final int ENV_STACK = 7;
     public static final int JSON_INDENT = 4;

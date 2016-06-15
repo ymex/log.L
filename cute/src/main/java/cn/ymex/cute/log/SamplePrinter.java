@@ -1,6 +1,4 @@
-package cn.ymex.cute.log;
-
-/**
+/*
  * Copyright (c) 2016. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
  * Morbi non lorem porttitor neque feugiat blandit. Ut vitae ipsum eget quam lacinia accumsan.
  * Etiam sed turpis ac ipsum condimentum fringilla. Maecenas magna.
@@ -9,8 +7,11 @@ package cn.ymex.cute.log;
  *
  * Email:ymex@foxmail.com  (www.ymex.cn)
  *
- * @author ymex 16/05/01
+ * @author ymex 15/05/01
  */
+package cn.ymex.cute.log;
+
+
 public final class SamplePrinter extends Printer {
     public static String SINGLE_ARROW_RIGHT = ">>>";
     public static String SINGLE_DIVIDER = "─────────────────────────────────────────";

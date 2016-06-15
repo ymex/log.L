@@ -1,3 +1,14 @@
+/*
+ * Copyright (c) 2015. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+ * Morbi non lorem porttitor neque feugiat blandit. Ut vitae ipsum eget quam lacinia accumsan.
+ * Etiam sed turpis ac ipsum condimentum fringilla. Maecenas magna.
+ * Proin dapibus sapien vel ante. Aliquam erat volutpat. Pellentesque sagittis ligula eget metus.
+ * Vestibulum commodo. Ut rhoncus gravida arcu.
+ *
+ * Email:ymex@foxmail.com  (www.ymex.cn)
+ *
+ * @author ymex
+ */
 package cn.ymex.cute.log;
 
 import android.text.TextUtils;
@@ -17,17 +28,6 @@ import java.util.Map;
 import java.util.Set;
 
 
-/**
- * Copyright (c) 2015. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
- * Morbi non lorem porttitor neque feugiat blandit. Ut vitae ipsum eget quam lacinia accumsan.
- * Etiam sed turpis ac ipsum condimentum fringilla. Maecenas magna.
- * Proin dapibus sapien vel ante. Aliquam erat volutpat. Pellentesque sagittis ligula eget metus.
- * Vestibulum commodo. Ut rhoncus gravida arcu.
- *
- * Email:ymex@foxmail.com  (www.ymex.cn)
- *
- * @author ymex
- */
 public  class LPrinter extends Printer {
     private static String CLASS_DETAIL  = "class │ ";
     private static String STACK_DETAIL  = "call  │ ";
