@@ -5,7 +5,7 @@ Log printer for Android
 ##Use in Android Studio
 
 ```
-    compile 'cn.ymex:cute.L:0.6.0'
+    compile 'cn.ymex:cute.L:1.0.0'
 ```
 
 ##Sample Usage
@@ -95,16 +95,21 @@ L.setLOG(false);
 ##capture picture
 
 - Base type
+
 <img src="https://github.com/ymex/cute.L/blob/master/base.png" width="100%" />
 
 - Object type
+
 <img src="https://github.com/ymex/cute.L/blob/master/object.png" width="100%" />
 
 - List type
+
 <img src="https://github.com/ymex/cute.L/blob/master/list.png" width="100%" />
 
 - Map type
+
 <img src="https://github.com/ymex/cute.L/blob/master/map.png" width="100%" />
 
 - Array type
+
 <img src="https://github.com/ymex/cute.L/blob/master/array.png" width="100%" />

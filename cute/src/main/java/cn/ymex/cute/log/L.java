@@ -19,7 +19,9 @@ public final class L {
     /**
      * 不允许实例化
      */
-    private L(){}
+    private L(){
+        throw new RuntimeException("Class L Not allow instance!");
+    }
     private static  Printer printer;
     private static  boolean LOG ;
     static {

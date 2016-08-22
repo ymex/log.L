@@ -27,7 +27,7 @@ publish {
     userOrg = 'ymex'
     groupId = 'cn.ymex'
     artifactId = 'cute.L'
-    publishVersion = '0.6.0'
+    publishVersion = '1.0.0'
     desc = 'Log printer for Android'
     website = 'https://github.com/ymex/cute.L'
 }
