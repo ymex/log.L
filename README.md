@@ -17,32 +17,32 @@ Log printer for Android
     L.e(Data.array());
     ...
 ```
-具体[参考样例](https://github.com/ymex/cute.L/blob/master/app%2Fsrc%2Fmain%2Fjava%2Fcn%2Fymex%2Fcutel%2FMainActivity.java)
+[Refer to the sample](https://github.com/ymex/cute.L/blob/master/app%2Fsrc%2Fmain%2Fjava%2Fcn%2Fymex%2Fcutel%2FMainActivity.java)
 
 
 ##Question
-###日志默认TAG是什么？
+###what is Log default TAG？
 ```
- public static String TAG = "cute.L";//默认日志tag
+ public static String TAG = "cute.L";//default tag
 ```
 
-###如何设置tag ?
+###how to set tag ?
 
 ```
 L.d(tag,message);
 ```
 
-###日志没有颜色 ?
-你需要在android studio 设置颜色：
+###why my Android studio Logcat has no color ?
+you need set android studio color in：
 `File > Settings > Editor > Colors &Fonts -> Android Logcat`
-去掉`Use Inberited attributes`的勾选框，  再将 `Foreground` 前的复选框选上，勾选`Foreground选择框`，
-点击`Foreground`后面颜色选择框。就可以选颜色了。 选好颜色点击`Apply–>OK`就能保存到android studio 中。
+check off `Use Inberited attributes`，  then check `Foreground` ，check `Foreground`，
+click `Foreground` color selecter。
 
-样例配色:
+Demo color:
 <table>
     <tr>
-        <th>标签</th>
-        <th>色值</th>
+        <th>Tag</th>
+        <th>Value</th>
     </tr>
     <tr>
         <td>Verbose</td>
@@ -71,26 +71,29 @@ L.d(tag,message);
 </table>
 
 
-###日志打印格式错乱 ？
-设置Android studio  Console 字体大小。
+###Log print format disorder ？
+setting Android studio  Console font size。
 `Editor>Colors&Fonts>Console Font `
 
-###全局关闭日志打印？
+###close log printer？
 
 ```
 L.setLOG(false);
 ```
 
-###自定义打印格式 ？
-你只需要要继承 `Printer` 类 实现以下方法：
+###Custom log print format ？
+you need extend `Printer` and implement the following method：
 ```
-    public abstract String logHeader();//日志头部
-    public abstract String logFooter();//日志底部内容
-    public abstract String logContent(Object message);//日志内容
+    public abstract String logHeader();//log header
+    public abstract String logFooter();//log footer
+    public abstract String logContent(Object message);//log content
 ```
-设置`L.setPrinter(new CustomerPrinter());`即可。
+set `L.setPrinter(new CustomerPrinter());`。
 
-
+###Want a simple print format？
+```java
+L.setPrinter(new SimplePrinter());
+```
 
 ##capture picture
 

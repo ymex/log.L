@@ -12,7 +12,7 @@
 package cn.ymex.cute.log;
 
 
-public final class SamplePrinter extends Printer {
+public final class SimplePrinter extends Printer {
     public static String SINGLE_ARROW_RIGHT = ">>>";
     public static String SINGLE_DIVIDER = "─────────────────────────────────────────";
 
