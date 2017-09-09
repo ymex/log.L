@@ -26,10 +26,10 @@ dependencies {
 publish {
     userOrg = 'ymex'
     groupId = 'cn.ymex'
-    artifactId = 'cute.L'
-    publishVersion = '1.0.0'
+    artifactId = 'log.L'
+    publishVersion = '1.2.0'
     desc = 'Log printer for Android'
-    website = 'https://github.com/ymex/cute.L'
+    website = 'https://github.com/ymex/log'
 }
 tasks.withType(JavaCompile) {
     options.encoding = "UTF-8"

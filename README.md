@@ -2,37 +2,37 @@
 Log printer for Android
 
 
-##Use in Android Studio
+## Use in Android Studio
 
 ```
     compile 'cn.ymex:cute.L:1.0.0'
 ```
 
-##Sample Usage
+## Sample Usage
 
 
-```java
-    L.w("this is String type!");
-    L.d(Data.object());
-    L.e(Data.array());
-    ...
+```
+L.w("this is String type!");
+L.d(Data.object());
+L.e(Data.array());
+...
 ```
 [Refer to the sample](https://github.com/ymex/cute.L/blob/master/app%2Fsrc%2Fmain%2Fjava%2Fcn%2Fymex%2Fcutel%2FMainActivity.java)
 
 
-##Question
-###what is Log default TAG？
+## Question
+### what is Log default TAG？
 ```
  public static String TAG = "cute.L";//default tag
 ```
 
-###how to set tag ?
+### how to set tag ?
 
 ```
 L.d(tag,message);
 ```
 
-###why my Android studio Logcat has no color ?
+### why my Android studio Logcat has no color ?
 you need set android studio color in：
 `File > Settings > Editor > Colors &Fonts -> Android Logcat`
 check off `Use Inberited attributes`，  then check `Foreground` ，check `Foreground`，
@@ -71,17 +71,17 @@ Demo color:
 </table>
 
 
-###Log print format disorder ？
+### Log print format disorder ？
 setting Android studio  Console font size。
 `Editor>Colors&Fonts>Console Font `
 
-###close log printer？
+### close log printer？
 
 ```
 L.setLOG(false);
 ```
 
-###Custom log print format ？
+### Custom log print format ？
 you need extend `Printer` and implement the following method：
 ```
     public abstract String logHeader();//log header
@@ -90,12 +90,12 @@ you need extend `Printer` and implement the following method：
 ```
 set `L.setPrinter(new CustomerPrinter());`。
 
-###Want a simple print format？
-```java
+### Want a simple print format？
+```
 L.setPrinter(new SimplePrinter());
 ```
 
-##capture picture
+## capture picture
 
 - Base type
 

@@ -30,6 +30,6 @@ public final class SimplePrinter extends Printer {
     }
     @Override
     public String logFooter() {
-        return "\n\n.";
+        return "\n";
     }
 }

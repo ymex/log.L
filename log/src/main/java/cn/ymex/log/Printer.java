@@ -20,10 +20,12 @@ public abstract class Printer {
     public static final int ENV_STACK = 7;
     public static final int JSON_INDENT = 4;
     public static final int MAX_CHARS= (int)(3.9*1024);//4*1024
-    public static String TAG = "log.L";//默认日志tag
+    public static final String TAG = "log.L";//默认日志tag
 
     public static final String NEXT_LINE = "\n";
     public static final String TAB = "\t";
+    //打印多参时log 间的分割
+    public static final String DIVIDERS=NEXT_LINE+NEXT_LINE;
 
     /**
      * 日志头部内容
@@ -46,15 +48,6 @@ public abstract class Printer {
      */
     public abstract String logContent(Object message);
 
-    /**
-     * 打印日志
-     *
-     * @param leve 日志级别
-     * @param ob   日志内容
-     */
-    public void log(int leve, Object ob) {
-        log(leve, "", ob);
-    }
 
     /**
      * 打印日志
@@ -117,14 +110,6 @@ public abstract class Printer {
         }
     }
 
-    /**
-     * 生成默认标签
-     *
-     * @return 如：D/cute.L/MainActivity
-     */
-    public String generateTag() {
-        return generateTag(TAG);
-    }
 
     /**
      * 生成用户配置标签：D/Tag/MainActivity

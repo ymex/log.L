@@ -39,15 +39,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         switch (v.getId()) {
             case R.id.btn_base://base type
                 L.i(1);
-                L.d(2.0);
+                //L.d(2.0);
                 L.e(false);
                 L.w("this is String type!");
                 break;
             case R.id.btn_ob://object type
-                L.d(Data.object());
+                L.d("tag", Data.object());
                 break;
             case R.id.btn_null:// object is null
-                L.d(null);
+                //L.d(new Object());
                 break;
             case R.id.btn_list: // list type
                 L.d(Data.list());
@@ -56,14 +56,20 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 L.w(Data.map());
                 break;
             case R.id.btn_array://array type
+
                 L.e(Data.array());
                 break;
             case R.id.btn_json://json data:
                 String json = new Gson().toJson(Data.array());
-                L.i(json);
+
+
+                L.tag("abc").logD(json, json, json);
+                L.tag("abc").logD(1, 2, 3, 4, 5, 6);
+                L.d("def", json);
+
                 break;
             case R.id.btn_thread:
-                L.setPrinter(new SimplePrinter());
+
                 new Thread(new Runnable() {
                     @Override
                     public void run() {
@@ -91,6 +97,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             }).start();
         }
     };
+
     private interface CallBack {
         void runlog();
     }
