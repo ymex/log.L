@@ -9,7 +9,7 @@
  *
  * @author ymex
  */
-package cn.ymex.cute.log;
+package cn.ymex.log;
 
 import android.text.TextUtils;
 import android.util.Log;
@@ -57,6 +57,8 @@ public  class LPrinter extends Printer {
         }
 
         builder.append(SINGLE_DIVIDER);
+        builder.append(SINGLE_ARROW_RIGHT);
+        builder.append(NEXT_LINE);
         builder.append(SINGLE_DIVIDER);
         builder.append(SINGLE_ARROW_RIGHT);
         builder.append(NEXT_LINE);
@@ -103,7 +105,7 @@ public  class LPrinter extends Printer {
 
 
         builder.append(NEXT_LINE);
-        builder.append(SINGLE_DOTTED_DIVIDER+SINGLE_DOTTED_DIVIDER);
+        builder.append(SINGLE_DOTTED_DIVIDER);
         return builder.toString();
     }
 
@@ -111,7 +113,7 @@ public  class LPrinter extends Printer {
     public String logFooter() {
         StringBuilder builder = new StringBuilder();
         builder.append(NEXT_LINE);
-        builder.append(SINGLE_DOTTED_DIVIDER+SINGLE_DOTTED_DIVIDER);
+        builder.append(SINGLE_DOTTED_DIVIDER);
         return builder.toString();
     }
 
@@ -207,12 +209,13 @@ public  class LPrinter extends Printer {
             if (json.startsWith("{")) {
                 JSONObject jsonObject = new JSONObject(json);
                 text = jsonObject.toString(JSON_INDENT);
-                return text;
             }
             if (json.startsWith("[")) {
                 JSONArray jsonArray = new JSONArray(json);
                 text = jsonArray.toString(JSON_INDENT);
-                return text;
+            }
+            if (json.length() > text.length()) {//非法的json
+                text = json;
             }
         } catch (JSONException e) {
             text = json;

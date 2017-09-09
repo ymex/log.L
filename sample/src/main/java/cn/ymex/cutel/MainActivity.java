@@ -9,7 +9,8 @@ import android.view.View;
 
 import com.google.gson.Gson;
 
-import cn.ymex.cute.log.L;
+import cn.ymex.log.L;
+import cn.ymex.log.SimplePrinter;
 import cn.ymex.cutel.model.Data;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
@@ -28,6 +29,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         findViewById(R.id.btn_map).setOnClickListener(this);
         findViewById(R.id.btn_array).setOnClickListener(this);
         findViewById(R.id.btn_json).setOnClickListener(this);
+        findViewById(R.id.btn_thread).setOnClickListener(this);
+
     }
 
 
@@ -55,11 +58,43 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.btn_array://array type
                 L.e(Data.array());
                 break;
-            case R.id.btn_json://json data
-                L.i(new Gson().toJson(Data.array()));
+            case R.id.btn_json://json data:
+                String json = new Gson().toJson(Data.array());
+                L.i(json);
+                break;
+            case R.id.btn_thread:
+                L.setPrinter(new SimplePrinter());
+                new Thread(new Runnable() {
+                    @Override
+                    public void run() {
+                        String tson = new Gson().toJson(Data.array());
+                        L.i(tson);
+                        callBack.runlog();
+                    }
+                }).start();
                 break;
         }
     }
+
+
+    private CallBack callBack = new CallBack() {
+        @Override
+        public void runlog() {
+            String tson = new Gson().toJson(Data.array());
+            L.i(tson);
+            new Thread(new Runnable() {
+                @Override
+                public void run() {
+                    String tson = new Gson().toJson(Data.array());
+                    L.i(tson);
+                }
+            }).start();
+        }
+    };
+    private interface CallBack {
+        void runlog();
+    }
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

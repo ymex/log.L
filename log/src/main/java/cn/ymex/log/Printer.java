@@ -9,7 +9,7 @@
  *
  * @author ymex  15/03/29
  */
-package cn.ymex.cute.log;
+package cn.ymex.log;
 
 import android.util.Log;
 
@@ -19,9 +19,8 @@ import java.lang.reflect.Method;
 public abstract class Printer {
     public static final int ENV_STACK = 7;
     public static final int JSON_INDENT = 4;
-    public static final int MAX_CHARS= 4000;
-    public static final String TAG_E = "cute.E";//打印错误信息tag
-    public static String TAG = "cute.L";//默认日志tag
+    public static final int MAX_CHARS= (int)(3.9*1024);//4*1024
+    public static String TAG = "log.L";//默认日志tag
 
     public static final String NEXT_LINE = "\n";
     public static final String TAB = "\t";
@@ -66,20 +65,22 @@ public abstract class Printer {
      */
     public void log(int leve, String tag, Object message) {
 
-        StringBuilder builder = new StringBuilder(logHeader().trim());
+        StringBuilder builder = new StringBuilder(logHeader());
         builder.append(NEXT_LINE);
-        builder.append(logContent(message).trim());
+        builder.append(logContent(message));
         builder.append(NEXT_LINE);
-        builder.append(logFooter().trim());
+        builder.append(logFooter());
         builder.append(NEXT_LINE);
+
         int logLength = builder.toString().length();
+
         if (logLength > MAX_CHARS) {
             _log(leve,tag,logHeader().toString());
-            String logContent = logContent(message).trim().toString();
+            String logContent = logContent(message);
             int len = logContent.length();
-            int count = logContent.length()/MAX_CHARS;
-            for (int i = 0; i<= count; i++){
-                int start = i*MAX_CHARS;
+            int count = len/MAX_CHARS+(len%MAX_CHARS==0?0:1);
+            for (int i = 1; i<= count; i++){
+                int start = (i-1)*MAX_CHARS;
                 int end = start+MAX_CHARS;
                 if (i==count){
                     _log(leve, tag, logContent.substring(start, len));
@@ -88,7 +89,7 @@ public abstract class Printer {
                 }
 
             }
-            _log(leve,tag,logFooter().toString().trim());
+            _log(leve,tag,logFooter().toString());
             return;
         }
         _log(leve, tag, builder.toString());
@@ -135,12 +136,14 @@ public abstract class Printer {
         if (tag.length() <= 0 || tag == null) {
             tag = TAG;
         }
-        StringBuilder builder = new StringBuilder(tag + "/");
-        String name = getLayerStackTrace(ENV_STACK).getClassName();
+        StringBuilder builder = new StringBuilder();
+        String name = getLayerStackTrace(ENV_STACK+1).getClassName();
         int lastIndex = name.lastIndexOf(".");
         name = name.substring(lastIndex + 1);
         int i = name.indexOf("$");
-        return builder.append(i == -1 ? name : name.substring(0, i)).toString();
+        builder.append(i == -1 ? name : name.substring(0, i)).toString();
+        builder.append("/" + tag);
+        return builder.toString();
     }
 
     public StackTraceElement[] getStackTrace() {

@@ -9,7 +9,7 @@
  *
  * @author ymex
  */
-package cn.ymex.cute.log;
+package cn.ymex.log;
 
 import android.util.Log;
 

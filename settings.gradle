@@ -1,2 +1,2 @@
-include ':app', ':cute'
+include ':sample', ':log'
 

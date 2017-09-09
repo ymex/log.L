@@ -9,20 +9,15 @@
  *
  * @author ymex 15/05/01
  */
-package cn.ymex.cute.log;
+package cn.ymex.log;
 
 
 public final class SimplePrinter extends Printer {
-    public static String SINGLE_ARROW_RIGHT = ">>>";
-    public static String SINGLE_DIVIDER = "─────────────────────────────────────────";
 
     @Override
     public String logHeader() {
         StackTraceElement element = getLayerStackTrace(ENV_STACK);
         StringBuilder builder = new StringBuilder();
-        builder.append(SINGLE_DIVIDER);
-        builder.append(SINGLE_ARROW_RIGHT);
-        builder.append("\n");
         builder.append(generateLinkMessage(element));
         return builder.toString();
     }
@@ -30,12 +25,11 @@ public final class SimplePrinter extends Printer {
     @Override
     public String logContent(Object message) {
         StringBuilder builder = new StringBuilder();
-        builder.append("\n");
         builder.append(message==null?"object is null": message.toString());
         return builder.toString();
     }
     @Override
     public String logFooter() {
-        return "\n"+SINGLE_DIVIDER;
+        return "\n\n.";
     }
 }
