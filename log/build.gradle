@@ -8,8 +8,8 @@ android {
     defaultConfig {
         minSdkVersion 9
         targetSdkVersion 23
-        versionCode 1
-        versionName "1.0"
+        versionCode 20
+        versionName "1.2.0"
     }
     buildTypes {
         release {
@@ -29,7 +29,7 @@ publish {
     artifactId = 'log.L'
     publishVersion = '1.2.0'
     desc = 'Log printer for Android'
-    website = 'https://github.com/ymex/log'
+    website = 'https://github.com/ymex/log.L'
 }
 tasks.withType(JavaCompile) {
     options.encoding = "UTF-8"

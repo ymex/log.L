@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         switch (v.getId()) {
             case R.id.btn_base://base type
                 L.i(1);
-                //L.d(2.0);
+                L.d(2.0);
                 L.e(false);
                 L.w("this is String type!");
                 break;
@@ -47,7 +47,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 L.d("tag", Data.object());
                 break;
             case R.id.btn_null:// object is null
-                //L.d(new Object());
+                L.d(new Object());
                 break;
             case R.id.btn_list: // list type
                 L.d(Data.list());
@@ -61,12 +61,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.btn_json://json data:
                 String json = new Gson().toJson(Data.array());
+                L.tag("abc").logD(json, json, json);//多参数
 
-
-                L.tag("abc").logD(json, json, json);
                 L.tag("abc").logD(1, 2, 3, 4, 5, 6);
-                L.d("def", json);
 
+                L.d("def", json);
                 break;
             case R.id.btn_thread:
 

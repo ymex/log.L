@@ -16,9 +16,6 @@ import android.util.Log;
 
 public final class L {
 
-    /**
-     * 不允许实例化
-     */
     private L() {
         throw new RuntimeException("Class L Not allow instance!");
     }
@@ -192,8 +189,8 @@ public final class L {
     }
 
     /**
-     * 强制转为Object对象,用于处理 object可变参所带来的问题 ,(只有当参数是数组时才可能 遇到这样的问题。)
-     *
+     * 强制转为Object对象,用于处理 object可变参所带来的问题
+     * (只有当参数是数组时才可能 遇到这样的问题。)
      * @param message
      * @return
      */

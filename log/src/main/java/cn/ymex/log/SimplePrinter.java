@@ -11,9 +11,10 @@
  */
 package cn.ymex.log;
 
-
+/**
+ * 简单日志打印
+ */
 public final class SimplePrinter extends Printer {
-
     @Override
     public String logHeader() {
         StackTraceElement element = getLayerStackTrace(ENV_STACK);

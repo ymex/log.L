@@ -19,7 +19,7 @@ import java.lang.reflect.Method;
 public abstract class Printer {
     public static final int ENV_STACK = 7;
     public static final int JSON_INDENT = 4;
-    public static final int MAX_CHARS= (int)(3.9*1024);//4*1024
+    public static final int MAX_CHARS= (int)(3.5*1024);//4*1024
     public static final String TAG = "log.L";//默认日志tag
 
     public static final String NEXT_LINE = "\n";
