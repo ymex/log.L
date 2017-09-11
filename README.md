@@ -1,6 +1,6 @@
 [ ![Download](https://api.bintray.com/packages/ymex/maven/log.L/images/download.svg) ](https://bintray.com/ymex/maven/log.L/_latestVersion)
 
-# cute.L
+# log.L
 Log printer for Android
 
 
