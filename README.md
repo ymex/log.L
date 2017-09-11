@@ -1,3 +1,5 @@
+[ ![Download](https://api.bintray.com/packages/ymex/maven/log.L/images/download.svg) ](https://bintray.com/ymex/maven/log.L/_latestVersion)
+
 # cute.L
 Log printer for Android
 
@@ -5,15 +7,20 @@ Log printer for Android
 ## Use in Android Studio
 
 ```
-    compile 'cn.ymex:cute.L:1.0.0'
+compile 'cn.ymex:log.L:1.2.0'
+
 ```
 
 ## Sample Usage
 
 
 ```
-L.w("this is String type!");
-L.d(Data.object());
+L.i(TAG,"log message");
+L.v("log message");
+
+L.tag().logD(message,message2,message3);
+L.tag(TAG).logW(Data.object());
+
 L.e(Data.array());
 ...
 ```
