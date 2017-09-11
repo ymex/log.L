@@ -61,16 +61,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.btn_json://json data:
                 String json = new Gson().toJson(Data.array());
-                L.tag("abc").logD(json, json, json);//多参数
 
-<<<<<<< 5372ce896ce1bc0a45cd790d41cfed72904e3511
-                L.tag("abc").logD(1, 2, 3, 4, 5, 6);
-=======
 
                 L.tag("tag-3-json").logD(json, json, json);
                 L.tag("tag-number").logD(1, 2, 3, 4, 5, 6);
                 L.d("def", json);
->>>>>>> v1.2.0
 
                 L.d("def", json);
                 break;
